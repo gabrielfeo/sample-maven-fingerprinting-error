@@ -281,6 +281,12 @@ Caused by: java.nio.file.AccessDeniedException: /Users/gfeo/p/gradle/dv-solution
 
 ## Reproducing the error
 
+### Pre-requisites
+
+- `grealpath` (`brew install coreutils`, https://www.gnu.org/software/coreutils/) or edit the script to use `realpath`. It must not be the macOS built-in `realpath`, as that doesn't support `--no-symlinks`.
+
+### Steps
+
 Check out [cb1e4e7][2] and run `./reproduce.sh`.
 
 ## Suppressing the error
