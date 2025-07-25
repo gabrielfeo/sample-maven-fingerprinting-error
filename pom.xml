@@ -32,7 +32,7 @@
                 <version>3.5.3</version>
                 <configuration>
                     <argLine>
-                        -Djava.library.path="${project.basedir}/link-level-2"
+                        -Djava.library.path="${project.basedir}/readable-dir"
                     </argLine>
                 </configuration>
             </plugin>

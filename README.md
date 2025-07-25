@@ -273,26 +273,12 @@ Caused by: java.nio.file.AccessDeniedException: /Users/gfeo/p/gradle/dv-solution
 
 ## Reproduced scenario
 
-- An unreadable directory (`unreadable-dir`) (current user has no permissions)
-- A readable symlink (`link-level-1`) to `unreadable-dir` (currrent user has all permissions)
-- A readable symlink (`link-level-2`) to `link-level-1` set to be used in surefire `argLine` as `-Djava.library.path` (current user has all permissions)
-- Develocity Maven extension 2.0
-- Maven 3.6.3 (wrapper or not is irelevant even though it changes the bottom of the stacktrace)
+This branch only demonstrates logging in a successful scenario, not the failing scenario.
 
 ## Reproducing the error
 
-### Pre-requisites
-
-- `grealpath` (`brew install coreutils`, https://www.gnu.org/software/coreutils/) or edit the script to use `realpath`. It must not be the macOS built-in `realpath`, as that doesn't support `--no-symlinks`.
-
 ### Steps
 
-Check out [cb1e4e7][2] and run `./reproduce.sh`.
-
-## Suppressing the error
-
-See commit [317a84f][3], which demonstrates how to suppress this error if build cache can also be disabled.
+Run `./reproduce.sh` to see how a successful build logs the fingerprinting process. This branch does NOT reproduce the error.
 
 [1]: https://docs.gradle.com/develocity/maven-extension/current/
-[2]: https://github.com/gabrielfeo/sample-maven-fingerprinting-error/commit/cb1e4e7b64cd8b3401a7a11780f257fb83365cb6
-[3]: https://github.com/gabrielfeo/sample-maven-fingerprinting-error/commit/317a84f887297bf88de274250ce39c8b9cec53b4
