@@ -30,6 +30,9 @@
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.3</version>
+                <configuration>
+                    <excludesFile>link-level-2</excludesFile>
+                </configuration>
             </plugin>
         </plugins>
     </build>

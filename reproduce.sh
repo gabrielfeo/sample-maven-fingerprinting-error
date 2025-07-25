@@ -4,7 +4,7 @@ set -euo pipefail
 
 dir="unreadable-dir"
 link_to_dir="link-level-1"
-link_to_link="src/main/java/link-level-2"
+link_to_link="link-level-2"
 
 echo "Removing files from a previous run, if they exist..."
 set -x

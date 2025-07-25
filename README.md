@@ -275,7 +275,7 @@ Caused by: java.nio.file.AccessDeniedException: /Users/gfeo/p/gradle/dv-solution
 
 - An unreadable directory (`unreadable-dir`) (current user has no permissions)
 - A readable symlink (`link-level-1`) to `unreadable-dir` (currrent user has all permissions)
-- A readable symlink (`src/main/java/link-level-2`) to `link-level-1` (current user has all permissions)
+- A readable symlink (`link-level-2`) to `link-level-1` set to be used as surefire `excludesFile` (current user has all permissions)
 - Develocity Maven extension 2.0
 - Maven 3.6.3 (wrapper or not is irelevant even though it changes the bottom of the stacktrace)
 
